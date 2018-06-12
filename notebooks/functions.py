@@ -1,4 +1,4 @@
-from keras.layers import Input, Dense, Dropout, Lambda, Concatenate, Dot, BatchNormalization, Activation
+from keras.layers import Input, Dense, Dropout, Lambda, Concatenate, concatenate, Dot, dot, BatchNormalization, Activation
 from keras import regularizers
 from keras.constraints import unit_norm
 from keras.layers import merge, dot  # works
