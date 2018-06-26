@@ -26,20 +26,20 @@ def is_notebook():
         return False      # Probably standard Python interpreter
 
 
-def get_simple_model(original_dim, latent_dim):
+def get_simple_model(input_dim, output_dim, latent_dim):
 
-    input_img = Input(shape=(original_dim,))
-    encoded = Dense(latent_dim, activation='relu')(input_img)
-    decoded = Dense(original_dim, activation='sigmoid')(encoded)
-    autoencoder = Model(input_img, decoded)
+    input_layer = Input(shape=(input_dim,))
+    encoded = Dense(latent_dim, activation='tanh')(input_layer)
+    decoded = Dense(output_dim, activation='sigmoid')(encoded)
+    autoencoder = Model(input_layer, decoded)
 
-    encoder = Model(input_img, encoded)
+    encoder = Model(input_layer, encoded)
 
     encoded_input = Input(shape=(latent_dim,))
     decoder_layer = autoencoder.layers[-1]
     decoder = Model(encoded_input, decoder_layer(encoded_input))
 
-    autoencoder.compile(optimizer='adam', loss='binary_crossentropy')
+    autoencoder.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
 
     return autoencoder, encoder, decoder
 
