@@ -1,7 +1,9 @@
 #Experimental Class for Smiles Enumeration, Iterator and SmilesIterator adapted from Keras 1.2.2
-from rdkit import Chem
-import numpy as np
 import threading
+
+import numpy as np
+from rdkit import Chem
+
 
 class Iterator(object):
     """Abstract base class for data iterators.

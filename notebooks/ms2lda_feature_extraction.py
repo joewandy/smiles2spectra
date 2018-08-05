@@ -1,9 +1,13 @@
 # coding=utf8
 # Simon's attempts to make a single feature selection pipeline
-from queue import PriorityQueue
-import numpy as np
-import sys, os
 import re
+from queue import PriorityQueue
+
+import numpy as np
+import os
+import sys
+
+
 # sys.path.append('/Users/simon/git/efcompute')
 # from ef_assigner import ef_assigner
 # from formula import Formula

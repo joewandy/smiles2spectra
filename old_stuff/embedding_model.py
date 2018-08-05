@@ -1,14 +1,16 @@
 import copy
+
 from keras import backend as K
 from keras import objectives
-from keras.models import Model
-from keras.layers import Input, Dense, Lambda
-from keras.layers.core import Dense, Activation, Flatten, RepeatVector
-from keras.layers import LSTM, Dropout
-from keras.layers.wrappers import TimeDistributed
-from keras.layers.recurrent import GRU
-from keras.layers.convolutional import Convolution1D
 from keras import optimizers
+from keras.layers import Input, Dense, Lambda
+from keras.layers import LSTM, Dropout
+from keras.layers.convolutional import Convolution1D
+from keras.layers.core import Dense, Activation, Flatten, RepeatVector
+from keras.layers.recurrent import GRU
+from keras.layers.wrappers import TimeDistributed
+from keras.models import Model
+
 
 class MoleculeVAE():
 

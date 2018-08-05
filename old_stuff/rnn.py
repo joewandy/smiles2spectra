@@ -18,21 +18,19 @@
 
 
 import os
-from glob import glob
-import pylab as plt
-import pandas as pd
-import numpy as np
 import pickle
+from collections import defaultdict
+from glob import glob
 
+import numpy as np
+import pandas as pd
+import pylab as plt
+from IPython.display import display, HTML
 from keras import layers
 from keras.models import Sequential
-from six.moves import range
 from livelossplot import PlotLossesKeras
-
-from IPython.display import display, HTML
-from collections import defaultdict
-
 from rdkit import Chem
+from six.moves import range
 
 
 #

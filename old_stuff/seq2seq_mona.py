@@ -15,12 +15,10 @@
 
 import random
 
-from IPython.display import display, HTML
-import pylab as plt
 import numpy as np
-
+import pylab as plt
+from IPython.display import display, HTML
 from pipeline import *
-
 
 # ### Test on MoNA data
 

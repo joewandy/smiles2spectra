@@ -1,19 +1,18 @@
-from keras.layers import Input, Dense, Dropout, Lambda, Concatenate, Dot, BatchNormalization, Activation
-from keras import regularizers
-from keras.constraints import unit_norm
-from keras.layers import merge, dot  # works
-from keras.models import Model
-from keras.losses import mse, binary_crossentropy
-
-from IPython.display import SVG
-from keras.utils.vis_utils import model_to_dot
-
-import numpy as np
-import matplotlib.pyplot as plt
 import os
 import pickle
 
+import matplotlib.pyplot as plt
+import numpy as np
+from IPython.display import SVG
 from embedding_model import MoleculeVAE
+from keras import regularizers
+from keras.constraints import unit_norm
+from keras.layers import Input, Dense, Dropout, Lambda, Concatenate, Dot, BatchNormalization, Activation
+from keras.layers import merge, dot  # works
+from keras.losses import mse, binary_crossentropy
+from keras.models import Model
+from keras.utils.vis_utils import model_to_dot
+
 
 def is_notebook():
     try:

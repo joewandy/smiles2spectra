@@ -21,29 +21,24 @@ get_ipython().run_line_magic('matplotlib', 'inline')
 
 
 import os
-from glob import glob
-import pylab as plt
-import pandas as pd
-import numpy as np
 import pickle
+from collections import defaultdict
+from glob import glob
 
-from sklearn.model_selection import train_test_split
-from sklearn.preprocessing import MultiLabelBinarizer
-
-from keras.models import Sequential
+import h5py
+import numpy as np
+import pandas as pd
+import pylab as plt
+from IPython.display import display, HTML
 from keras import layers
 from keras.layers import Dense, Dropout, Activation
 from keras.metrics import categorical_accuracy
-from livelossplot import PlotLossesKeras
+from keras.models import Sequential
 from keras.utils.vis_utils import plot_model
-
-import h5py
-
-from IPython.display import display, HTML
-from collections import defaultdict
-
+from livelossplot import PlotLossesKeras
 from rdkit import Chem
-
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import MultiLabelBinarizer
 
 # In[3]:
 

@@ -11,7 +11,6 @@ from livelossplot import PlotLossesKeras
 
 from functions import *
 
-
 # In[ ]:
 
 

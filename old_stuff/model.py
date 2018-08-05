@@ -1,14 +1,16 @@
 from __future__ import print_function
 
 import pickle
-from keras.preprocessing.sequence import pad_sequences
-from keras.models import Model
-from keras.layers import Input, LSTM, Dense, GRU, Masking
-from keras.callbacks import History, ReduceLROnPlateau, EarlyStopping
-import numpy as np
-from livelossplot import PlotLossesKeras
 from collections import Counter
+
+import numpy as np
 import pylab as plt
+from keras.callbacks import History, ReduceLROnPlateau, EarlyStopping
+from keras.layers import Input, LSTM, Dense, GRU, Masking
+from keras.models import Model
+from keras.preprocessing.sequence import pad_sequences
+from livelossplot import PlotLossesKeras
+
 
 # Mostly copy and pasted from https://github.com/keras-team/keras/blob/master/examples/lstm_seq2seq.py
 

@@ -1,19 +1,18 @@
+import os.path
 from collections import namedtuple
 from random import randint
-import os.path
 
 import numpy as np
-from sklearn.preprocessing import LabelEncoder
-from sklearn.preprocessing import OneHotEncoder
+from SmilesEnumerator import SmilesEnumerator
+from keras.callbacks import History, ReduceLROnPlateau, EarlyStopping
+from keras.layers import Input, LSTM, Dense, RepeatVector, TimeDistributed, Masking, Embedding
+from keras.models import Model, Sequential
 from keras.preprocessing.sequence import pad_sequences
 from keras.utils import to_categorical
-from keras.models import Model, Sequential
-from keras.layers import Input, LSTM, Dense, RepeatVector, TimeDistributed, Masking, Embedding
-from keras.callbacks import History, ReduceLROnPlateau, EarlyStopping
 from livelossplot import PlotLossesKeras
-from SmilesEnumerator import SmilesEnumerator
-
 from seq2seq import SimpleSeq2Seq, Seq2Seq, AttentionSeq2Seq
+from sklearn.preprocessing import LabelEncoder
+from sklearn.preprocessing import OneHotEncoder
 
 EncodedResult = namedtuple('EncodedResult', 'vocab, vocab_to_idx, idx_to_vocab, int_encoded, onehot_encoded, max_features, max_timesteps')
 
